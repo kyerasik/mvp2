@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Video</title>
+    <title>mvp</title>
     <style>
         *, ::before, ::after {
             box-sizing: border-box;
@@ -13,13 +13,13 @@
 
         body {
             font-family: Roboto, sans-serif;
-            overflow: hidden; /* Чтобы избежать появления прокрутки при использовании объекта cover */
+            overflow: hidden; 
         }
 
         .home {
             height: 100vh;
             position: relative;
-            overflow: hidden; /* Убираем возможность прокрутки видео */
+            overflow: hidden; 
         }
 
         .video-overlay {
@@ -27,8 +27,8 @@
             width: 100%;
             height: 100%;
             background: url('video.mp4') center center / cover;
-            filter: blur(10px); /* Применяем эффект размытия */
-            z-index: -1; /* Помещаем под видео */
+            filter: blur(10px);
+            z-index: -1; 
         }
 
         video {
@@ -43,7 +43,7 @@
             padding-top: 150px;
             color: #fff;
             text-align: center;
-            z-index: 1; /* Помещаем контент поверх видео */
+            z-index: 1; 
         }
 
         h1 {
@@ -70,18 +70,19 @@
         }
 
         .home-content button img {
-            width: 37px; /* Устанавливаем размер иконки */
-            margin-right: 10px; /* Отступ между иконкой и текстом */
-            vertical-align: middle; /* Выравниваем по вертикали */
+            width: 37px;
+            margin-right: 10px;
+            vertical-align: middle; 
         }
     </style>
 </head>
 <body>
     <div class="home">
         <div class="video-overlay"></div>
-        <video muted loop autoplay>
-          <source src="video.mp4" type="video/mp4">
-        </video>
+        <video muted loop autoplay playsinline>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
         <div class="home-content">
           <h1><img style="width: 280px;" src="logo-removebg-preview.png" alt="Logo"></h1>
   
